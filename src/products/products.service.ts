@@ -8,7 +8,14 @@ export class ProductsService {
 
     constructor(@InjectRepository(Product) private productRepository: Repository<Product>) {}
 
-    getProducts() {
-     return this.productRepository.find()
+    async getProducts() {
+     return this.productRepository.find({
+        relations: ['theCategory']
+     })
+
+    }
+
+    async queryBuilder (alias: string) {
+        return this.productRepository.createQueryBuilder(alias);
     }
 }

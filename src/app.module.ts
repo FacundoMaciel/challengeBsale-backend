@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CategoryModule } from './categories/category.module';
+
 
 @Module({
   imports: [
@@ -14,7 +16,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'bsale_test',
       entities: [__dirname + '/**/*.entity{.ts,.js}']   
     }),
-    ProductsModule],
+    ProductsModule,
+    CategoryModule],
   controllers: [AppController],
   providers: [AppService],
 })
