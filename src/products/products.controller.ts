@@ -2,7 +2,7 @@ import { Controller, Get, Req } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { Request } from 'express'
 
-@Controller('products')
+@Controller('api/products')
 export class ProductsController {
 
     constructor( private productsService: ProductsService) {}
@@ -12,7 +12,7 @@ export class ProductsController {
         return this.productsService.getProducts();
     }
     
-    @Get('product')
+    @Get('api/product')
     async getProduct(@Req() req: Request) {
         
         const builder = await this.productsService.queryBuilder('product')
@@ -31,3 +31,5 @@ export class ProductsController {
 
     }
 }
+
+//@ApiResponse({ status: HttpStatus.OK, type: Object, isArray: false }) @Body @Param (@Body() product: ParamDto),
