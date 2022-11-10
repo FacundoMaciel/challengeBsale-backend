@@ -12,7 +12,6 @@ export class ProductsService {
      return this.productRepository.find({
         relations: ['theCategory']
      })
-
     }
 
     async queryBuilder (alias: string) {

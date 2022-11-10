@@ -12,7 +12,7 @@ export class ProductsController {
         return this.productsService.getProducts();
     }
     
-    @Get('api/product')
+    @Get('product')
     async getProduct(@Req() req: Request) {
         
         const builder = await this.productsService.queryBuilder('product')
@@ -20,11 +20,23 @@ export class ProductsController {
         if(req.query.s) {
             builder.where('product.name LIKE :s', {s: `%${req.query.s}%`})
         }
-
+        
         const sort: any = req.query.sort;
 
         if (sort) {
-            builder.orderBy('product.category', sort.toUpperCase())
+            builder.orderBy('product.price', sort.toUpperCase())
+        }
+
+        return await builder.getMany();
+
+    }
+    @Get('category')
+    async getCategory(@Req() req: Request) {
+        
+        const builder = await this.productsService.queryBuilder('product')
+
+        if(req.query.c) {
+            builder.where('product.category LIKE :c', {c: `%${req.query.c}%`})
         }
 
         return await builder.getMany();
@@ -32,4 +44,3 @@ export class ProductsController {
     }
 }
 
-//@ApiResponse({ status: HttpStatus.OK, type: Object, isArray: false }) @Body @Param (@Body() product: ParamDto),
