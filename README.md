@@ -106,7 +106,7 @@ Estructura:
 
 }
 
-<img src='./assets/imagen2.png'/>
+<img src='./assets/primeraPagina.png'/>
 
 
 * GET /api/products 
@@ -141,6 +141,7 @@ Estructura JSON:
 },
 
 <img src='./assets/imagen2.png'/>
+<img src='./assets/todosLosProductos.png'/>
 
 * GET /api/products/product?s=coca
 
@@ -202,7 +203,7 @@ Estructura JSON:
 ]
 
 <img src='./assets/imagen1.png'/>
-
+<img src='./assets/filtroPorNombre.png'/>
 * GET /api/category
 
 Ruta EndPoint para obtener las categorias mediante una función asincrona ("getCategory()") creada en el archivo category.service.ts con un metodo get funcional por el decorador @Get de Nest en el archivo category.controller.ts donde se invoca para resolver la petición @Get async getCategory
