@@ -85,12 +85,13 @@ Es decir, los datos de productos deben llegar filtrados al cliente.
 
 * GET /
 
-Primera ruta perteneciente al archivo app en donde se hace una peticion get mediante el decorador @Get de Nest y me devuelve una estructura de objeto tipeada por mi en app.service donde se llama a la funcion get creada en app.controllers ambos del app.module
+Primera ruta perteneciente al archivo app en donde se hace una peticion get mediante el decorador @Get de Nest y me devuelve una estructura de objeto tipeada por mi en app.controller.ts donde se llama a la funcion get creada en app.service.ts ambos del app.module
 
 URL: 
   https://challengebsale-backend.herokuapp.com/
      
-Estructura: 
+Estructura:
+
 {
 
 "msg":"404 Page",
@@ -107,9 +108,160 @@ Estructura:
 
 * GET /api/products 
 
+Ruta EndPoint para obtener todos los productos mediante una función asincrona ("getProducts()") creada en el archivo products.service.ts con un metodo get funcional por el decorador @Get de Nest en el archivo products.controller.ts donde se invoca para resolver la petición @Get async getProducts
 
+URL:
 
+https://challengebsale-backend.herokuapp.com/api/products
 
+Estructura JSON:
+
+{
+
+"id": 5,
+
+"name": "ENERGETICA MR BIG",
+
+"url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg",
+
+"price": 1490,
+
+"discount": 20,
+
+"category": 1,
+
+"theCategory": {
+"id": 1,
+"name": "bebida energetica"
+}
+
+},
+
+* GET /api/products/product?s=coca
+
+Ruta EndPoint para obtener todos los productos que coincidan con la query request mediante una función asincrona @Get(getProduct) que recibe otro decorador @Req del tipo Request.query, se declara una variable de nombre builder que espera la respuesta de una funcion asincrona para encontrar el resultado junto con un condicional if que indica donde coincide la query con la palabra ingresada.
+
+URL:
+
+https://challengebsale-backend.herokuapp.com/api/products/product?s=coca
+
+Estructura JSON:
+
+[
+{
+
+"id": 37,
+
+"name": "COCA COLA ZERO DESECHABLE",
+
+"url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/cocazero9766.jpg",
+
+"price": 1490,
+
+"discount": 0,
+
+"category": 4
+
+},
+
+{
+"id": 57,
+
+"name": "COCA COLA NORMAL DESECHABLE 1500cc",
+
+"url_image": null,
+
+"price": 1500,
+
+"discount": 0,
+
+"category": 4
+
+},
+
+{
+
+"id": 58,
+
+"name": "COCA COLA LIGHT DESECHABLE",
+
+"url_image": null,
+
+"price": 1500,
+
+"discount": 0,
+
+"category": 4
+
+}
+]
+
+* GET /api/category
+
+Ruta EndPoint para obtener las categorias mediante una función asincrona ("getCategory()") creada en el archivo category.service.ts con un metodo get funcional por el decorador @Get de Nest en el archivo category.controller.ts donde se invoca para resolver la petición @Get async getCategory
+
+URL: 
+  https://challengebsale-backend.herokuapp.com/api/category
+     
+Estructura JSON:
+
+[
+{
+
+"id": 1,
+
+"name": "bebida energetica"
+
+},
+
+{
+
+"id": 2,
+
+"name": "pisco"
+
+},
+
+{
+
+"id": 3,
+
+"name": "ron"
+
+},
+
+{
+
+"id": 4,
+
+"name": "bebida"
+
+},
+
+{
+
+"id": 5,
+
+"name": "snack"
+
+},
+
+{
+
+"id": 6,
+
+"name": "cerveza"
+
+},
+
+{
+
+"id": 7,
+
+"name": "vodka"
+
+}
+]
 
 
 
