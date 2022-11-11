@@ -106,6 +106,7 @@ Estructura:
 
 }
 
+<img src='./assets/imagen2.png'/>
 
 
 * GET /api/products 
@@ -138,6 +139,8 @@ Estructura JSON:
 }
 
 },
+
+<img src='./assets/imagen2.png'/>
 
 * GET /api/products/product?s=coca
 
@@ -197,6 +200,8 @@ Estructura JSON:
 
 }
 ]
+
+<img src='./assets/imagen1.png'/>
 
 * GET /api/category
 
@@ -265,7 +270,7 @@ Estructura JSON:
 }
 ]
 
-
+<img src='./assets/imagen3.png'/>
 
 
 
