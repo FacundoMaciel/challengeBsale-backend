@@ -106,6 +106,8 @@ Estructura:
 
 }
 
+
+
 * GET /api/products 
 
 Ruta EndPoint para obtener todos los productos mediante una función asincrona ("getProducts()") creada en el archivo products.service.ts con un metodo get funcional por el decorador @Get de Nest en el archivo products.controller.ts donde se invoca para resolver la petición @Get async getProducts
