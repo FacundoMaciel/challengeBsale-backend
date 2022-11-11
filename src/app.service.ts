@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 export class AppService {
   getHello(): Object {
     return {
-      "msg":"404 Page",
+      "msg":"404 page not found",
       "project":"Desafío producto Bsale",
       "author":"Facundo Maciel",
       "description":"ApiRest con NestJS TypeOrm y DB mySQL",
