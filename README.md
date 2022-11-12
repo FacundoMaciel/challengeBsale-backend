@@ -91,22 +91,21 @@ URL:
   https://challengebsale-backend.herokuapp.com/
      
 Estructura:
+```javascript
+  {
 
-{
+    "msg":"404 Page",
 
-"msg":"404 Page",
+    "project":"Desafío producto Bsale",
 
-"project":"Desafío producto Bsale",
+    "author":"Facundo Maciel",
 
-"author":"Facundo Maciel",
+    "description":"ApiRest con NestJS TypeOrm y DB mySQL",
 
-"description":"ApiRest con NestJS TypeOrm y DB mySQL",
+    "version":"1.0.0"
 
-"version":"1.0.0"
-
-}
-
-<img src='./assets/primeraPagina.png'/>
+  } 
+```
 
 
 * GET /api/products 
@@ -118,30 +117,29 @@ URL:
 https://challengebsale-backend.herokuapp.com/api/products
 
 Estructura JSON:
+```javascript
+  {
 
-{
+    "id": 5,
 
-"id": 5,
+    "name": "ENERGETICA MR BIG",
 
-"name": "ENERGETICA MR BIG",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg",
 
-"url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg",
+    "price": 1490,
 
-"price": 1490,
+    "discount": 20,
 
-"discount": 20,
+    "category": 1,
 
-"category": 1,
+    "theCategory": {
+      "id": 1,
+      "name": "bebida energetica"
+     }
 
-"theCategory": {
-"id": 1,
-"name": "bebida energetica"
-}
+  }
+```
 
-},
-
-<img src='./assets/imagen2.png'/>
-<img src='./assets/todosLosProductos.png'/>
 
 * GET /api/products/product?s=coca
 
@@ -152,58 +150,58 @@ URL:
 https://challengebsale-backend.herokuapp.com/api/products/product?s=coca
 
 Estructura JSON:
+```javascript
+  [
+    {
 
-[
-{
+      "id": 37,
 
-"id": 37,
+      "name": "COCA COLA ZERO DESECHABLE",
 
-"name": "COCA COLA ZERO DESECHABLE",
+      "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/cocazero9766.jpg",
 
-"url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/cocazero9766.jpg",
+      "price": 1490,
 
-"price": 1490,
+      "discount": 0,
 
-"discount": 0,
+      "category": 4
 
-"category": 4
+    },
 
-},
+    {
+    
+      "id": 57,
 
-{
-"id": 57,
+      "name": "COCA COLA NORMAL DESECHABLE 1500cc",
 
-"name": "COCA COLA NORMAL DESECHABLE 1500cc",
+      "url_image": null,
 
-"url_image": null,
+      "price": 1500,
 
-"price": 1500,
+      "discount": 0,
 
-"discount": 0,
+      "category": 4
 
-"category": 4
+    },
 
-},
+    {
 
-{
+      "id": 58,
 
-"id": 58,
+      "name": "COCA COLA LIGHT DESECHABLE",
 
-"name": "COCA COLA LIGHT DESECHABLE",
+      "url_image": null,
 
-"url_image": null,
+      "price": 1500,
 
-"price": 1500,
+      "discount": 0,
 
-"discount": 0,
+      "category": 4
 
-"category": 4
+    }
+  ]
+```
 
-}
-]
-
-<img src='./assets/imagen1.png'/>
-<img src='./assets/filtroPorNombre.png'/>
 * GET /api/category
 
 Ruta EndPoint para obtener las categorias mediante una función asincrona ("getCategory()") creada en el archivo category.service.ts con un metodo get funcional por el decorador @Get de Nest en el archivo category.controller.ts donde se invoca para resolver la petición @Get async getCategory
@@ -212,66 +210,66 @@ URL:
   https://challengebsale-backend.herokuapp.com/api/category
      
 Estructura JSON:
+```javascript
+  [
+    {
 
-[
-{
+      "id": 1,
 
-"id": 1,
+      "name": "bebida energetica"
 
-"name": "bebida energetica"
+    },
 
-},
+    {
 
-{
+      "id": 2,
 
-"id": 2,
+      "name": "pisco"
 
-"name": "pisco"
+    },
 
-},
+    {
 
-{
+      "id": 3,
 
-"id": 3,
+      "name": "ron"
 
-"name": "ron"
+    },
 
-},
+    {
 
-{
+      "id": 4,
 
-"id": 4,
+      "name": "bebida"
 
-"name": "bebida"
+    },
 
-},
+    {
 
-{
+      "id": 5,
 
-"id": 5,
+      "name": "snack"
 
-"name": "snack"
+    },
 
-},
+    {
 
-{
+      "id": 6,
 
-"id": 6,
+      "name": "cerveza"
 
-"name": "cerveza"
+    },
 
-},
+    {
 
-{
+      "id": 7,
 
-"id": 7,
+      "name": "vodka"
 
-"name": "vodka"
+    }
+  ]
+```
 
-}
-]
-
-<img src='./assets/imagen3.png'/>
 
 
 
