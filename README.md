@@ -6,17 +6,17 @@
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
 
-## Description
+## Descripción
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript.
 
-## Installation
+## Instalación
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## Correr la app
 
 ```bash
 # development
@@ -29,7 +29,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Testeo
 
 ```bash
 # unit tests
@@ -42,9 +42,9 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Soporte
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Nest es un proyecto de código abierto con licencia del MIT. Puede crecer gracias a los patrocinadores y al apoyo de los increíbles patrocinadores. Si desea unirse a ellos, [lea más aquí] (https://docs.nestjs.com/support).
 
 ## Desafío Bsale
 
