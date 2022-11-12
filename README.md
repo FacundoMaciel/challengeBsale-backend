@@ -204,7 +204,7 @@ Estructura JSON:
 
 * GET /api/category
 
-Ruta EndPoint para obtener las categorias mediante una función asincrona ("getCategory()") creada en el archivo category.service.ts con un metodo get funcional por el decorador @Get de Nest en el archivo category.controller.ts donde se invoca para resolver la petición @Get async getCategory
+Ruta EndPoint para obtener las categorias mediante una función asincrona ("getCategory()") creada en el archivo category.service.ts con un método get funcional por el decorador @Get de Nest en el archivo category.controller.ts donde se invoca para resolver la petición @Get async getCategory con un condicional para comparar y poder buscar productos segun su categoría.
 
 URL: 
   https://challengebsale-backend.herokuapp.com/api/category
